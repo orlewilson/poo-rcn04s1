@@ -34,10 +34,58 @@ class Aluno():
 		if (not nome.isnumeric()):
 			self.__nome = nome
 	
+	# Alterar conteúdo do atributo endereco
+	def setEndereco(self, endereco):
+		if (not endereco.isnumeric()):
+			self.__endereco = endereco	
+
+	# Alterar conteúdo do atributo dataNascimento
+	def setDataNascimento(self, dataNascimento):
+		# obtém os valores
+		dia = dataNascimento[0:2]
+		mes = dataNascimento[3:5]
+		ano = dataNascimento[6:10]
+
+		if (dia.isnumeric() and mes.isnumeric() and ano.isnumeric()):
+			self.__dataNascimento = dataNascimento	
+
+	# Alterar conteúdo do atributo nomeCurso
+	def setNomeCurso(self, nomeCurso):
+		if (not nomeCurso.isnumeric()):
+			self.__nomeCurso = nomeCurso	
+
+	# Alterar conteúdo do atributo bolsista
+	def setBolsista(self, bolsista):
+		
+		if (bolsista.lower() == 'sim'):
+		#if (bolsista.upper() == 'SIM'):
+			self.__bolsista = True
+		
+		elif (bolsista.lower() == 'não'):
+			self.__bolsista = False
+
 	# Recuperar conteúdo do atributo nome
 	def getNome(self):
 		return self.__nome
 
+	# Recuperar conteúdo do atributo endereco
+	def getEndereco(self):
+		return self.__endereco
+
+	# Recuperar conteúdo do atributo dataNascimento
+	def getDataNascimento(self):
+		return self.__dataNascimento
+
+	# Recuperar conteúdo do atributo nomeCurso
+	def getNomeCurso(self):
+		return self.__nomeCurso
+
+	# Recuperar conteúdo do atributo bolsista
+	def getBolsista(self):
+		if (self.__bolsista):
+			return "Sim"
+		else:
+			return "Não"
 
 #Fim da classe Aluno -----------------------------
 
@@ -50,17 +98,17 @@ aluno1 = Aluno()
 
 #Atribuindo valores aos atributos do objeto aluno1
 aluno1.setNome(input("Digite seu nome:"))
-#aluno1.endereco = input("Digite seu endereço:")
-#aluno1.dataNascimento = input("Digite sua data de nascimento:")
-#aluno1.nomeCurso = input("Digite seu curso: ")
-#aluno1.bolsista = bool(input("Você é bolsista?"))
+aluno1.setEndereco(input("Digite seu endereço:"))
+aluno1.setDataNascimento(input("Digite sua data de nascimento:"))
+aluno1.setNomeCurso(input("Digite seu curso: "))
+aluno1.setBolsista(input("Você é bolsista?"))
 
 # Imprimir conteúdos do objeto aluno1
 print("Nome: " + aluno1.getNome() + "\n")
-#print("Endereço: " + aluno1.endereco + "\n")
-#print("Data Nascimento: " + aluno1.dataNascimento + "\n")
-#print("Nome Curso: ", aluno1.nomeCurso, "\n")
-#print("Bolsista: " + str(aluno1.bolsista) + "\n")
+print("Endereço: " + aluno1.getEndereco() + "\n")
+print("Data Nascimento: " + aluno1.getDataNascimento() + "\n")
+print("Nome Curso: ", aluno1.getNomeCurso(), "\n")
+print("Bolsista: " + aluno1.getBolsista() + "\n")
 
 """
 Tarefa para casa: 
