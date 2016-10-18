@@ -34,12 +34,20 @@ class Aluno(Pessoa):
 				 bolsista = "Não",
 				 periodo = 1):
 		# Primeira Forma
-		Pessoa.setNome(self, nome)
-		Pessoa.setEndereco(self, endereco)
-		Pessoa.setDataNascimento(self, dataNascimento)
-		Pessoa.setCpf(self, cpf)
-		Pessoa.setMatricula(self, matricula)
+		#Pessoa.setNome(self, nome)
+		#Pessoa.setEndereco(self, endereco)
+		#Pessoa.setDataNascimento(self, dataNascimento)
+		#Pessoa.setCpf(self, cpf)
+		#Pessoa.setMatricula(self, matricula)
 		
+		# Segunda Forma
+		#Pessoa.__init__(self, nome, endereco, 
+		#	dataNascimento, cpf, matricula)
+
+		# Terceira Forma
+		super().__init__(nome, endereco, 
+			dataNascimento, cpf, matricula)
+
 		self.setNomeCurso(nomeCurso)
 		self.setBolsista(bolsista)
 		self.setPeriodo(periodo)
@@ -82,12 +90,20 @@ class Aluno(Pessoa):
 
 	# Imprimir informações sobre o aluno
 	def imprimir(self):
-		print("Nome: " + Pessoa.getNome(self) + "\n")
-		print("Endereço: " + Pessoa.getEndereco(self) + "\n")
-		print("Data Nascimento: " + Pessoa.getDataNascimento(self) + "\n")
-		print("CPF: " + Pessoa.getCpf(self) + "\n")
-		print("Matricula: " + Pessoa.getMatricula(self) + "\n")
+
+		# Primeira forma
+		#print("Nome: " + Pessoa.getNome(self) + "\n")
+		#print("Endereço: " + Pessoa.getEndereco(self) + "\n")
+		#print("Data Nascimento: " + Pessoa.getDataNascimento(self) + "\n")
+		#print("CPF: " + Pessoa.getCpf(self) + "\n")
+		#print("Matricula: " + Pessoa.getMatricula(self) + "\n")
 		
+		# Segunda forma
+		#Pessoa.imprimir(self)
+
+		# Terceira forma
+		super().imprimir()
+
 		print("Nome Curso: ", self.getNomeCurso(), "\n")
 		print("Bolsista: " + self.getBolsista() + "\n")
 		print("Período: " + str(self.getPeriodo()) + "\n")
