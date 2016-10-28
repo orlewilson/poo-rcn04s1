@@ -1,0 +1,20 @@
+Crie uma pasta chamada Mercadinho São João. Em seguida, crie o conjunto de classes:
+
+- Classe Pessoa
+	Criar a classe Pessoa com o atributo nome e seus métodos de acesso (encapsulamento). 
+	Criar o método imprimir(). 
+	Criar um construtor que deverá inicializar o atributo da classe.
+
+- Classe PessoaFisica
+	Criar a classe PessoaFisica que deverá ser uma subclasse de Pessoa (herança).
+	Criar os atributos cpf e data de nascimento e seus métodos de acesso.
+	Desenvolver o método imprimir(), que exibirá os dados na tela.
+	Criar um construtor que deverá inicializar o atributo da classe e da super classe utilizando o comando super.
+
+- Classe PessoaJuridica
+	Criar a classe PessoaJuridica que também estende da classe Pessoa.
+	Criar os atributos cnpj, inscrição estadual, nome fantasia e razão social. Criar os métodos de acesso.
+	Desenvolver o método imprimir(), que exibirá os dados na tela.
+	Criar um construtor que deverá inicializar o atributo da classe e da super classe utilizando o comando super.
+
+Criar um novo arquivo para criar objetos a partir dessas classes e povoar com valores correspondentes.
