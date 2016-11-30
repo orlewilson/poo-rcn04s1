@@ -1,0 +1,12 @@
+1. Implemente a classe Funcionario. Um funcionário tem um nome e um salário. Escreva  um  construtor com  dois parâmetros (nome e salário) e o método aumentarSalario (porcentualDeAumento) que aumente o salário do funcionário em uma certa porcentagem. 
+
+Exemplo de uso:  
+harry=funcionario("Harry",25000)  
+harry.aumentarSalario(10) 
+
+Faça um programa que teste o método da classe.
+
+2. Escreva uma classe chamada “Primos” que tenha um método para identificar se um determinado número é primo. 
+
+
+3. Escreva uma classe chamada “Fibonacci” que tenha um método que receba como parâmetro um número inteiro para indicar a quantidade de termos que se quer calcular e imprimir da série. Série: 1 + 1 + 2 + 3 + 5 + 8 + 13 + ...
